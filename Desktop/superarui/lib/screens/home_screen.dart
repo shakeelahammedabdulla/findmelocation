@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:superarui/models/Brain3D.dart';
+import 'package:superarui/models/Heart3D.dart';
+import 'package:superarui/models/Humanbody3D.dart';
+import 'package:superarui/models/Kidney3D.dart';
+import 'package:superarui/models/Lungs3D.dart';
+import 'package:superarui/models/Pregnantwomen3D.dart';
+import 'package:superarui/models/Skeleton3D.dart';
 
 // Enum for image events
 enum ImageEvent { toggleSave }
@@ -24,15 +31,24 @@ class ImageBloc extends Bloc<ImageEvent, List<Map<String, dynamic>>> {
 // UI
 class HomePage extends StatelessWidget {
   final List<Map<String, dynamic>> _listItem = [
-    {"image": 'assets/images/anatomy/kidney.jpeg', "isSaved": false},
-    {"image": 'assets/images/anatomy/hand.jpeg', "isSaved": false},
-    {"image": 'assets/images/anatomy/leg.jpeg', "isSaved": false},
-    {"image": 'assets/images/five.jpg', "isSaved": true},
-    {"image": 'assets/images/one.jpg', "isSaved": false},
-    {"image": 'assets/images/two.jpg', "isSaved": false},
-    {"image": 'assets/images/three.jpg', "isSaved": false},
-    {"image": 'assets/images/four.jpg', "isSaved": false},
-    {"image": 'assets/images/five.jpg', "isSaved": false},
+    // {"image": 'assets/images/anatomy/kidney.jpeg', "isSaved": false},
+    {"image": 'assets/images/anatomy1/lungs.png', "isSaved": false},
+    {"image": 'assets/images/anatomy1/brain.png', "isSaved": false},
+    {"image": 'assets/images/anatomy1/heart.png', "isSaved": false},
+    {"image": 'assets/images/anatomy1/anatomy.png', "isSaved": false},
+    {"image": 'assets/images/anatomy1/kidney.png', "isSaved": false},
+    {"image": 'assets/images/anatomy1/pregwomen.png', "isSaved": false},
+    {"image": 'assets/images/anatomy1/skelliton.png', "isSaved": false},
+    {"image": 'assets/images/anatomy1/humanbody.png', "isSaved": false},
+
+    // {"image": 'assets/images/anatomy/hand.jpeg', "isSaved": false},
+    // {"image": 'assets/images/anatomy/leg.jpeg', "isSaved": false},
+    // {"image": 'assets/images/five.jpg', "isSaved": true},
+    // {"image": 'assets/images/one.jpg', "isSaved": false},
+    // {"image": 'assets/images/two.jpg', "isSaved": false},
+    // {"image": 'assets/images/three.jpg', "isSaved": false},
+    // {"image": 'assets/images/four.jpg', "isSaved": false},
+    // {"image": 'assets/images/five.jpg', "isSaved": false},
   ];
 
   @override
@@ -125,27 +141,75 @@ class ImageGrid extends StatelessWidget {
           .map((item) => GestureDetector(
                 onTap: () {
                   // Check which image is tapped and navigate accordingly
-                  if (item['image'] == 'assets/images/anatomy/kidney.jpeg') {
+                  if (item['image'] == 'assets/images/anatomy1/kidney.png') {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => NewPage(),
+                        builder: (context) => KidneyApp(),
                       ),
                     );
                   } else if (item['image'] ==
-                      'assets/images/anatomy/hand.jpeg') {
+                      'assets/images/anatomy1/lungs.png') {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => NewPage(),
+                        builder: (context) => Lungs(),
                       ),
                     );
                   } else if (item['image'] ==
-                      'assets/images/anatomy/leg.jpeg') {
+                      'assets/images/anatomy1/brain.png') {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => NewPage(),
+                        builder: (context) => Brain(),
+                      ),
+                    );
+                  } else if (item['image'] ==
+                      'assets/images/anatomy1/heart.png') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Heart(),
+                      ),
+                    );
+                  } else if (item['image'] ==
+                      'assets/images/anatomy1/pregwomen.png') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Pregnantwomen(),
+                      ),
+                    );
+                  } else if (item['image'] ==
+                      'assets/images/anatomy1/skelliton.png') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Skeleton(),
+                      ),
+                    );
+                  } else if (item['image'] ==
+                      'assets/images/anatomy1/humanbody.png') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Humanbody(),
+                      ),
+                    );
+                  } else if (item['image'] ==
+                      'assets/images/anatomy1/anatomy.png') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Humanbody(),
+                      ),
+                    );
+                  } else if (item['image'] ==
+                      'assets/images/anatomy1/humanbody.png') {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Humanbody(),
                       ),
                     );
                   } else {
@@ -217,5 +281,3 @@ void main() {
     home: HomePage(),
   ));
 }
-
-

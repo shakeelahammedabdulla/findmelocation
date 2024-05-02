@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "562750650926",
+    "project_id": "faceapp-de745",
+    "storage_bucket": "faceapp-de745.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562750650926:android:66a78f7537dd89f74b3dbf",
+        "android_client_info": {
+          "package_name": "com.example.face_auth"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx9T_EvUDOXdYrwoXwP0yWQUasItJRUjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:562750650926:android:9134d58fad3fab394b3dbf",
+        "android_client_info": {
+          "package_name": "com.faceapp_de745.facesecureapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx9T_EvUDOXdYrwoXwP0yWQUasItJRUjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
